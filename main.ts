@@ -37,8 +37,14 @@
 // seven windows with worst case -$7.90, versus -$20.77 mean and
 // -$59.86 worst for a shallow 0.4%-dip bot; on this race's dev
 // window it makes +$2.99 (one tranche held to the end), which
-// clears the dev gate. A full-size round trip costs ~26 bps, so
-// the bot trades as rarely as the ladder allows.
+// clears the dev gate. Per-window backtest (race windows of the
+// seven previous races, this bot vs the shallow bot):
+//   11-09  +$1.3  (shallow -$7.1)    11-15  +$6.0  (shallow +$8.7)
+//   11-11  -$4.4  (shallow -$13.3)   11-17  +$0.3  (shallow -$8.6)
+//   11-12  +$1.6  (shallow -$50.1)   11-18  -$7.9  (shallow -$15.1)
+//   11-13  -$0.9  (shallow -$59.9)
+// A full-size round trip costs ~26 bps, so the bot trades as
+// rarely as the ladder allows.
 
 import { runBars } from './vendor/makefun-bars.ts';
 
