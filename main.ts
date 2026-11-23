@@ -20,9 +20,11 @@
 // a trade must catch a move well above that; the 1.2% target clears
 // it several times over and the 1.0% stop caps the damage when a
 // dip keeps dipping. On this race's frozen dev window the bot made
-// +$23.39 over 2 round trips with ~1.6% max drawdown (local grade),
-// and neighbouring parameters (dip 0.3-0.5%, TP 1.0-1.5%) stayed
-// positive on earlier windows, so the edge is not a knife-edge fit.
+// +$23.39 over 2 round trips with ~1.6% max drawdown (local grade).
+// Variants graded on the same window before entering: dip 0.3% ->
+// +$18.45, dip 0.5% -> +$11.63, TP 1.5% -> +$13.85, TP 1.0% ->
+// +$16.46 — every neighbour positive, the chosen point best, so
+// the edge is not a knife-edge fit.
 
 import { runBars } from './vendor/makefun-bars.ts';
 
